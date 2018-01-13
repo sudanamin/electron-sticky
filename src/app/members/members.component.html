@@ -1,0 +1,45 @@
+
+ 
+
+
+<div #parent></div> 
+<div id ='mainTab'>
+
+<div *ngIf="auth.user | async as user">
+   
+    <img *ngIf="user.photoURL" id="userPhoto" src="{{user.photoURL}}">
+    &nbsp;&nbsp;
+    
+    <h3 *ngIf="user.displayName;else no_name">  hi {{user.displayName}} </h3>
+    <ng-template #no_name><h3> hi {{user.email}}</h3> </ng-template>
+    <button (click)="auth.signOut()" class="logoutButton">Logout</button>
+    <div id="donate">
+     
+      <form ngNoForm action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="ABSPNPD4E8RXY">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        </div><!--  donate div -->
+  </div>
+ 
+
+</div>  <!--  main tab div -->
+<br><br>
+
+<div id="pag">
+        <div id = "aimid"  (mouseup)="mouseUp($event)"   class ="sticker"  style="background-color:#FFFF8A;top:180px;">  </div>
+        <div id = "a222"  (mouseup)="mouseUp($event)"  class ="sticker"  style="background-color:#6596F7;top:240px;">  </div>
+        <div class ="sticker"  (mouseup)="mouseUp($event)" style="background-color: #92FF8A;top:300px;">  </div>
+        <div class ="sticker"  (mouseup)="mouseUp($event)" style="background-color: #DA55C6;top:360px;">  </div>
+        <div class ="sticker"  (mouseup)="mouseUp($event)" style="background-color: #ff8534;top:420px;">  </div>
+      </div>
+      <!--  <app-sticky-component></app-sticky-component>  -->
+       <!--<app-sticky-component *ngFor="let sticky of posts | async" 
+
+         style="background-color: #ff9634;top:420px; orange 
+        [idd]="sticky.title"></app-sticky-component>-->
+          
+       
+       

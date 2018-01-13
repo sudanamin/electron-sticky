@@ -1,0 +1,24 @@
+<!-- <!-- [style.z-index]="zIndex"  -->
+
+
+
+  <div class ="head"  (click)="increaseZindex($event)" [style.zIndex]="_zindex"    [style.left.px]  = "_topLeft.left"  [style.top.px] = "_topLeft.top" ><div class ="spec"(mouseup)="mouseUp($event)"> 
+      <img (click)="addSticky($event)" src="../assets/add.png" alt="Mountain View" style="width:12px;height:12px;
+      position: relative;bottom:6px;right:5px"> 
+      <img  (click)="deleteSticky()" src="../assets/close b.png"  
+      alt="Mountain View" style=" position: relative;right:-149px;bottom:1px; width:20px;height:20px;"></div> 
+      <div class ="sticker2"  [id]="_stickyID" [style.backgroundColor]="_StickyColorr" [style.width.px]= "_width" [style.height.px]= "_height"> 
+      <p class="paragraphClass"  (paste)="pasteFunction($event)" [innerHTML]="liveText" (input)="textChanged($event)" contenteditable="true"></p>
+      </div></div>
+    
+
+     
+      <!-- style="background-color:#6596F7"  
+         <div *ngIf="auth.user | async as user">
+              <h3> hi {{user.displayName}} </h3>
+              </div>
+        (input) = "innerHTML = $event.target.value"
+[(ngModel)]="title"
+
+        [style.backgroundColor]="amin" -->
+     
