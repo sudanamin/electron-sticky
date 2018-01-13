@@ -9,7 +9,8 @@ function createWindow () {
    // backgroundColor: '#ffffff',
     icon: `file://${__dirname}/dist/assets/logo.png`
   })
-  win.loadURL(`file://${__dirname}/dist/index.html`)
+ // win.loadURL(`file://${__dirname}/dist/index.html`)
+ win.loadURL(`https://angular-sticky.firebaseapp.com`);
   //// uncomment below to open the DevTools.
   // win.webContents.openDevTools()
   // Event when the window is closed.
